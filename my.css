@@ -1,0 +1,43 @@
+*{
+    margin:0
+    padding:0
+}
+#main{
+      display:-webkit-box;
+}
+#numbers{
+    height:245px;
+    width:245px;
+    background:-webkit-linear-gradient(top-left,grey,whitesmoke);
+    background-color: gray;
+}
+ #screen{
+     width:237px;
+     height: 20px;
+     background-color: white;
+     border:1px solid gray;
+     padding:30px; 
+     text-align: center;
+     -webkit-box-shadow:rgb(110,110,110) 10px 10px 10px inset;
+ }
+#numbers button{
+    width: 80px;
+    height:60px;
+    background-color:darkgray;
+    float:left;
+    text-align:center;
+    padding:20px;
+    margin:auto;
+    border-radius: 0.3;/*this is an error please check*/
+}
+#operators{
+    width:20px;
+    height:245px;
+	background-color: pink;
+}
+#operators button{
+    webkit-border-radius: 25px;
+    width:50px;
+    height:40px;
+    -webkit-box-shadow: rgba(180,200,200,0.3) 4px 4px ;
+}

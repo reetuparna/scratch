@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="my.css"/>
+
+
+</head>
+<body>
+		
+        <p id="screen"></p>
+		
+        <div id="main">
+        <section id="numbers">
+            <button>7</button>
+            <button >8</button>
+            <button>9</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>0</button>
+            <button id="clear">C</button>
+            <button>.</button>
+        </section>
+        <section id="operators">
+            <button>+</button>
+            <button>-</button>
+            <button>*</button>
+            <button>/</button>
+            <button>%</button>
+            <button>=</button>
+        </section>
+		
+    </div>
+</body>
+<script>
+			var operators=['+','-','*','/','%'];
+			var dec=false;
+			var keys=document.getElementsByTagName("button");
+
+	function add(){			
+		for (var i = 0; i < keys.length; i++) {
+	 
+			keys[i].addEventListener("click",cal);
+	 
+				}	}		
+		 function cal(){
+
+				var input=document.getElementById("screen");
+				var inputval=input.innerHTML;
+			    var btnval=this.innerHTML;
+				
+				if(btnval=='C'){
+					input.innerHTML="";
+					dec=false;
+					}
+				else if(btnval=='.' && dec==false){
+					input.innerHTML+=btnval;
+					dec=true;
+				}
+				else if(btnval=='='){
+					input.innerHTML=eval(inputval);
+					dec=false;
+				}
+				else if(operators.indexOf(btnval)>-1){
+					var lc=inputval[inputval.length-1];
+					
+					if(operators.indexOf(lc) > -1 && inputVal.length > 1) {
+						input.innerHTML=inputval.replace(btnval);
+					}
+					if(inputval!='' && operators.indexOf(lc)==-1)
+						input.innerHTML+=btnval;
+					else if(inputval=='' && btnval=='-')
+						input.innerHTML+=btnval;
+					else
+						input.innerHTML+=btnval;
+					}
+				else
+				     input.innerHTML+=btnval;
+				}
+			window.onload = add;
+			
+        </script>
+</html>
+
